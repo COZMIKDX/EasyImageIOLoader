@@ -11,12 +11,6 @@
         </javac>
     </target>
 
-    <target name="run">
-        <java jar="out/production/Projects/LoginScreen.jar" fork="true">
-            <classpath path="./out/production/EasyImageIOLoader"/>
-        </java>
-    </target>
-
     <target name="jar">
         <jar basedir="out/production/EasyImageIOLoader/com/cozmikdx/easyimageioloader" destfile="out/production/artifacts/EasyImageIOLoader/EasyImageIOLoader.jar">
 

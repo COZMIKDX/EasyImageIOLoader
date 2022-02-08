@@ -1,0 +1,25 @@
+<project>
+    <target name="clean">
+        <delete dir="./out"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="./out/production/EasyImageIOLoader"/>
+        <mkdir dir="./out/production/artifacts/EasyImageIOLoader"/>
+        <javac includeantruntime="false" debug="true" srcdir="./src/com/cozmikdx/easyimageioloader" destdir="./out/production/EasyImageIOLoader">
+            <classpath path="./out/production/"/>
+        </javac>
+    </target>
+
+    <target name="run">
+        <java jar="out/production/Projects/LoginScreen.jar" fork="true">
+            <classpath path="./out/production/EasyImageIOLoader"/>
+        </java>
+    </target>
+
+    <target name="jar">
+        <jar basedir="out/production/EasyImageIOLoader/com/cozmikdx/easyimageioloader" destfile="out/production/artifacts/EasyImageIOLoader/EasyImageIOLoader.jar">
+
+        </jar>
+    </target>
+</project>
